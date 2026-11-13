@@ -1,0 +1,19 @@
+/* התאמה לשפה החזותית של klainerg/kleiner-family, שנבדקה ב־13.11.2026. */
+:root{--paper:#f7f3eb;--ink:#253c36;--muted:#646a62;--line:#d5ccba;--accent:#927140;--green:#253c36}
+body{font-family:Arial,"Noto Sans Hebrew",sans-serif}
+h1,h2,h3,.branch-labels,.meeting{font-family:Georgia,"Times New Roman",serif}
+.masthead{background:rgba(247,243,235,.98)}
+.masthead>a{color:var(--ink);font-weight:bold}
+.masthead>a span{color:var(--ink)}
+.hero{background:none}
+h1 em{color:var(--ink)}
+.subtitle{font-size:19px}
+.placeholder{background:#eee9df;border:1px dashed #bdb19b}
+figure{background:transparent;border:0;padding:0;margin:38px 0 42px}
+.placeholder{min-height:210px;padding:30px}
+.placeholder span{color:var(--accent)}
+article p{white-space:pre-wrap;overflow-wrap:anywhere;unicode-bidi:plaintext;margin-bottom:27px}
+article h3{color:var(--ink)}
+.related-story{border-inline-start:2px solid var(--accent);padding-inline-start:18px;margin:45px 0;font-size:17px;line-height:1.8}
+.related-story a{color:var(--accent)}
+@media(max-width:800px){article p{font-size:18px;line-height:1.95}.placeholder{min-height:180px}.subtitle{font-size:18px}}
