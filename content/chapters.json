@@ -1,0 +1,7 @@
+[
+  {"id":"intro","title":"שני סיפורים שהפכו למשפחה אחת","file":"intro.txt","label":"פתח דבר"},
+  {"id":"sherel","title":"משפחת שרל מאורינין","file":"sherel.txt","label":"חלק ראשון"},
+  {"id":"berman","title":"משפחת ברמן ופורמן","file":"berman.txt","label":"חלק שני"},
+  {"id":"together","title":"שני הסיפורים הופכים לאחד","file":"together.txt","label":"חלק שלישי"},
+  {"id":"epilogue","title":"הסיפור שנשאר","file":"epilogue.txt","label":"אחרית דבר"}
+]
