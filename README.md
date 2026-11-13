@@ -52,11 +52,9 @@
 
 ## פרסום ב־GitHub Pages
 
-השם המוצע למאגר החדש: `sherel-berman-family`. העלו אליו את תוכן התיקייה הזו, כך ש־`index.html` יהיה בשורש המאגר, בענף `main`. אין להעלות את האתר לתוך מאגר קליינר.
+האתר פורסם במאגר [klainerg/sherel-berman-family](https://github.com/klainerg/sherel-berman-family). כתובת האתר: https://klainerg.github.io/sherel-berman-family/
 
-במאגר החדש בחרו Settings → Pages → Source → GitHub Actions. תהליך הפרסום המוכן נמצא ב־`.github/workflows/pages.yml`; לאחר ההגדרה הפעילו אותו ב־Actions → פרסום האתר → Run workflow, או שמרו שינוי נוסף. לאחר הצלחה כתובת האתר מופיעה ב־Settings → Pages ובתוצאת הפרסום. כל שמירה עתידית בענף main מפעילה פרסום מחדש.
-
-אפשר גם לבחור Deploy from a branch, בענף main ובתיקיית root, במקום תהליך Actions.
+הפרסום מוגדר ב־Settings → Pages → Deploy from a branch, בענף main ובתיקיית root. לאחר כל עריכה ושמירה בענף main האתר מתפרסם מחדש אוטומטית. אפשר לעקוב אחר התהליך בלשונית Actions. אין צורך בבנייה או בהתקנת חבילות. אין להעלות את הקבצים למאגר קליינר.
 
 ## תצוגה מקומית
 
