@@ -12,7 +12,7 @@
     ['together-1','1949','גרישה ודשה'],['together-2','הדור הבא','איגור ונליה'],['event-nelia','1957','לידתה של נליה'],['event-igor','1990','פטירת איגור'],['event-israel','1991','העלייה לישראל']
   ];
   let scheduled=false,lastKey='';
-  function update(){scheduled=false;const story=document.getElementById('story');if(!story||!document.getElementById('sherel'))return;const box=story.getBoundingClientRect();nav.hidden=box.top>innerHeight*.7||box.bottom<120;if(nav.hidden)return;
+  function update(){scheduled=false;const story=document.getElementById('story');if(!story||!document.getElementById('sherel'))return;const box=story.getBoundingClientRect();nav.hidden=box.top>innerHeight*.7||box.bottom<120||document.getElementById('tree').getBoundingClientRect().top<innerHeight;if(nav.hidden)return;
     const visible=definitions.map(d=>({id:d[0],date:d[1],label:d[2],target:document.getElementById(d[0])})).filter(d=>d.target&&!d.target.closest('[hidden]'));
     let index=0;for(let i=0;i<visible.length;i++){if(visible[i].target.getBoundingClientRect().top<=innerHeight*.35)index=i;}
     const item=visible[index];if(!item)return;year.textContent=item.date;const percent=Math.round(index/Math.max(1,visible.length-1)*100);fill.style.height=percent+'%';progress.setAttribute('aria-valuenow',percent);progress.setAttribute('aria-valuetext',item.date+' — '+item.label);
