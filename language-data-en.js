@@ -1,4 +1,8 @@
 window.EN_UI={
+  "שני דורות במלחמה": "Two generations at war",
+  "פטירת גרישה": "Grisha’s death",
+  "גרישה שרל נפטר ב־1974": "Grisha Sherel died in 1974",
+
   "שורשי משפחות שרל וברמן": "Sherel and Berman Family Roots",
   "שורשי משפחות": "Family Roots",
   "שרל": "Sherel",

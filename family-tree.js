@@ -20,7 +20,7 @@
   for(const [id,text] of [['sherel',window.i18n.t('משפחת שרל')],['berman',window.i18n.t('ברמן ופורמן')],['together',window.i18n.t('גרישה ודשה')],['all',window.i18n.t('הצג הכול')]]){const b=make('button',text);b.type='button';b.onclick=()=>data&&focus(id);b.disabled=true;buttons[id]=b;controls.append(b);}
   for(const [text,aria,factor] of [['+',window.i18n.t('הגדלת העץ'),1.25],['−',window.i18n.t('הקטנת העץ'),.8]]){const b=make('button',text);b.type='button';b.setAttribute('aria-label',aria);b.onclick=()=>zoomAt(factor);controls.append(b);}
   controls.append(label);root.append(controls,viewport);
-  const legend=make('div',null,'tree-legend');legend.append(make('span',window.i18n.t('הורים וילדים')),make('span',window.i18n.t('בני זוג'),'marriage'),make('span',window.i18n.t('קשר לדורות קודמים'),'ancestry'));root.append(legend);
+  const legend=make('div',null,'tree-legend');legend.append(make('span',window.i18n.t('הורים וילדים')),make('span',window.i18n.t('בני זוג'),'marriage'));root.append(legend);
   const help=make('p',window.i18n.t('אפשר להזיז גם באמצעות מקשי החצים, להגדיל ב־+ ולהקטין ב־−. רשימת השמות בהמשך מאפשרת להגיע לכל אדם גם ללא גרירה.'));help.id='tree-help';root.append(help);
   const list=make('details',null,'tree-list');list.append(make('summary',window.i18n.t('רשימת בני המשפחה')));const ul=make('ul');list.append(ul);root.append(list);
   const dialog=make('dialog',null,'tree-details');dialog.setAttribute('aria-label',window.i18n.t('פרטי בן משפחה'));document.body.append(dialog);let lastPerson;
@@ -40,16 +40,15 @@
   viewport.addEventListener('keydown',e=>{const moves={ArrowLeft:[50,0],ArrowRight:[-50,0],ArrowUp:[0,50],ArrowDown:[0,-50]};if(moves[e.key]){e.preventDefault();tx+=moves[e.key][0];ty+=moves[e.key][1];draw();}if(['+','=','-','−'].includes(e.key)){e.preventDefault();zoomAt(['+','='].includes(e.key)?1.25:.8);}});
   function path(d,cls=''){const p=document.createElementNS(svg.namespaceURI,'path');p.setAttribute('d',d);if(cls)p.setAttribute('class',cls);svg.append(p);}
   function text(x,y,value){const t=document.createElementNS(svg.namespaceURI,'text');t.setAttribute('x',x);t.setAttribute('y',y);t.textContent=value;svg.append(t);}
-  fetch('family-tree.json?v=20261121-trilingual-bronya').then(r=>{if(!r.ok)throw Error('tree');return r.json();}).then(async value=>{
+  fetch('family-tree.json?v=20261121-sherel-lineage').then(r=>{if(!r.ok)throw Error('tree');return r.json();}).then(async value=>{
     if(window.i18n.lang!=='he'){
-      const response=await fetch('family-tree-'+window.i18n.lang+'.json?v=20261121-trilingual-bronya');if(!response.ok)throw Error('translation');const translated=await response.json();const people=new Map(translated.people.map(p=>[p.id,p]));
-      value.people=value.people.map(p=>{if(!people.has(p.id))throw Error('Missing person translation');return {...p,...people.get(p.id)};});value.ancestry=value.ancestry.map(a=>({...a,label:translated.ancestryLabel}));
+      const response=await fetch('family-tree-'+window.i18n.lang+'.json?v=20261121-sherel-lineage');if(!response.ok)throw Error('translation');const translated=await response.json();const people=new Map(translated.people.map(p=>[p.id,p]));
+      value.people=value.people.map(p=>{if(!people.has(p.id))throw Error('Missing person translation');return {...p,...people.get(p.id)};});
     }
     data=value;const byId=new Map(data.people.map(p=>[p.id,p]));
     function children(x,y,ids){if(!ids.length)return;const people=ids.map(id=>byId.get(id)),barY=Math.min(...people.map(p=>p.y))-45;path(`M${x} ${y} V${barY} H${people[0].x+100}`);for(const p of people)path(`M${x} ${barY} H${p.x+100} V${p.y}`);}
     for(const couple of data.couples){const [a,b]=couple.partners.map(id=>byId.get(id));const left=a.x<b.x?a:b,right=a.x<b.x?b:a,y=left.y+60,x=(left.x+200+right.x)/2;path(`M${left.x+200} ${y} H${right.x}`,'spouse');if(couple.label)text(x,y-85,couple.label);children(x,y,couple.children);}
     for(const relation of data.parents){const p=byId.get(relation.parent);children(p.x+100,p.y+120,relation.children);}
-    for(const relation of data.ancestry){const a=byId.get(relation.from),b=byId.get(relation.to);path(`M${a.x+100} ${a.y+120} V${b.y-35} H${b.x+100} V${b.y}`,'ancestry');text(a.x+240,a.y+135,relation.label);}
     for(const p of data.people){const button=make('button',null,'person-node');button.type='button';button.style.left=p.x+'px';button.style.top=p.y+'px';button.dataset.person=p.id;button.dataset.family=p.family;button.append(make('span',p.name),make('small',p.subtitle));button.setAttribute('aria-label',p.name+' — '+p.subtitle);button.addEventListener('click',e=>{if(e.detail===0)details(p);});canvas.append(button);const li=make('li');const b=make('button',p.name+' — '+p.subtitle);b.type='button';b.onclick=()=>details(p);li.append(b);ul.append(li);}
     Object.values(buttons).forEach(b=>b.disabled=false);focus('together');new ResizeObserver(()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>focus(selectedFocus));}).observe(viewport);
   }).catch(()=>{viewport.replaceChildren(make('p',window.i18n.t('לא ניתן לטעון את העץ כרגע. אפשר לרענן את הדף ולנסות שוב.')));});

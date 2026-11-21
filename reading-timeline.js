@@ -7,9 +7,9 @@
   const fill=document.createElement('span');progress.append(fill);
   const list=document.createElement('div');list.className='timeline-stops';nav.append(title,year,progress,list);document.body.append(nav);
   const definitions=[
-    ['sherel-1',window.i18n.t('שורשים'),window.i18n.t('הדורות הראשונים')],['sherel-2',window.i18n.t('לפני 1941'),window.i18n.t('אורינין')],['sherel-3','1941–1942',window.i18n.t('המלחמה והחורבן')],['sherel-4',window.i18n.t('מ־1944'),window.i18n.t('החזרה לאורינין')],
+    ['sherel-1',window.i18n.t('שורשים'),window.i18n.t('הדורות הראשונים')],['sherel-2',window.i18n.t('לפני 1941'),window.i18n.t('אורינין')],['sherel-3','1941–1942',window.i18n.t('המלחמה והחורבן')],['sherel-service','1941–1945',window.i18n.t('שני דורות במלחמה')],['sherel-4',window.i18n.t('מ־1944'),window.i18n.t('החזרה לאורינין')],
     ['berman-1','1895–1928',window.i18n.t('משפחת ברמן ופורמן')],['berman-2',window.i18n.t('לפני 1941'),window.i18n.t('השנים שלפני המלחמה')],['berman-3','1941',window.i18n.t('המשפחה מתפצלת')],['berman-4','1941',window.i18n.t('הבריחה מלבוב')],['berman-5',window.i18n.t('ימי המלחמה'),window.i18n.t('האסון על הדוברה')],['berman-6',window.i18n.t('שנות הפינוי'),window.i18n.t('ימנקה')],['berman-7','1943',window.i18n.t('האיחוד עם רוזה')],['berman-8',window.i18n.t('ימי הכיבוש'),window.i18n.t('אלה שלא שרדו')],['berman-9','1944–1946',window.i18n.t('החזרה לחיים')],
-    ['together-1','1949',window.i18n.t('גרישה ודשה')],['together-2',window.i18n.t('הדור הבא'),window.i18n.t('איגור ונליה')],['event-nelia','1957',window.i18n.t('לידתה של נליה')],['event-igor','1990',window.i18n.t('פטירת איגור')],['event-israel','1991',window.i18n.t('העלייה לישראל')]
+    ['together-1','1949',window.i18n.t('גרישה ודשה')],['together-2',window.i18n.t('הדור הבא'),window.i18n.t('איגור ונליה')],['event-nelia','1957',window.i18n.t('לידתה של נליה')],['event-grisha','1974',window.i18n.t('פטירת גרישה')],['event-igor','1990',window.i18n.t('פטירת איגור')],['event-israel','1991',window.i18n.t('העלייה לישראל')]
   ];
   let scheduled=false,lastKey='';
   function update(){scheduled=false;const story=document.getElementById('story');if(!story||!document.getElementById('sherel'))return;const box=story.getBoundingClientRect();nav.hidden=box.top>innerHeight*.7||box.bottom<120||document.getElementById('tree').getBoundingClientRect().top<innerHeight;if(nav.hidden)return;
@@ -20,7 +20,7 @@
   }
   function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(update);}}
   function setup(){
-    const milestones=[['event-nelia',window.i18n.t('לזוג נולדו שני ילדים:')],['event-igor',window.i18n.t('בשנת 1990 נפטר')],['event-israel',window.i18n.t('שנה לאחר מכן, בשנת 1991')]];
+    const milestones=[['event-nelia',window.i18n.t('לזוג נולדו שני ילדים:')],['event-grisha',window.i18n.t('גרישה שרל נפטר ב־1974')],['event-igor',window.i18n.t('בשנת 1990 נפטר')],['event-israel',window.i18n.t('שנה לאחר מכן, בשנת 1991')]];
     document.querySelectorAll('#together p').forEach(p=>{for(const [id,start] of milestones)if(p.textContent.startsWith(start))p.id=id;});
     new MutationObserver(schedule).observe(document.getElementById('story'),{subtree:true,attributes:true,attributeFilter:['hidden']});window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);if(location.hash.startsWith('#event-'))requestAnimationFrame(()=>document.getElementById(location.hash.slice(1))?.scrollIntoView({behavior:'instant'}));schedule();
   }

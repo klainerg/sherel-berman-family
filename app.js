@@ -2,7 +2,7 @@
 'use strict';
 const el=(tag,text,className)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(className)node.className=className;return node;};
 const safeName=name=>/^[a-zA-Z0-9][a-zA-Z0-9_.-]*$/.test(name)&&!name.includes('..');
-const fetchFile=async(path,json=false)=>{const r=await fetch(path+'?v=20261121-trilingual-bronya',{cache:'no-store'});if(!r.ok)throw new Error(path);return json?r.json():r.text();};
+const fetchFile=async(path,json=false)=>{const r=await fetch(path+'?v=20261121-sherel-lineage',{cache:'no-store'});if(!r.ok)throw new Error(path);return json?r.json():r.text();};
 let sourceMap=new Map();
 let references=new Map();
 let zoom=1;
@@ -30,7 +30,14 @@ function renderChapter(chapter,text){
   for(const block of text.trim().split(/\r?\n\s*\r?\n/)){
     const image=block.trim().match(/^\[\[תמונה:\s*([^|\]]+)\s*\|\s*([^\]]+)\]\]$/);
     if(image){article.append(figure(image[1].trim(),image[2].trim()));continue;}
-    if(block.startsWith('## ')){const h=el('h3',block.slice(3).trim());h.id=`${chapter.id}-${++headingIndex}`;article.append(h);continue;}
+    if(block.startsWith('## ')){
+      const title=block.slice(3).trim();
+      const anchored=title.match(/^\[([a-z][a-z0-9-]*)\] (.+)$/);
+      const h=el('h3',anchored ? anchored[2] : title);
+      h.id=anchored ? anchored[1] : `${chapter.id}-${++headingIndex}`;
+      article.append(h);
+      continue;
+    }
     const p=el('p');inline(p,block);article.append(p);
   }return article;
 }

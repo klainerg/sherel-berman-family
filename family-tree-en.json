@@ -3,14 +3,20 @@
     {
       "id": "zakharia",
       "name": "Zakharia Sherel",
-      "subtitle": "Nelia’s great-grandfather",
-      "notes": "One of the earlier generations of the Sherel family. His photograph has been preserved in the family."
+      "subtitle": "Naum’s father",
+      "notes": "Iosif’s grandfather. The family preserved his photograph."
+    },
+    {
+      "id": "naum",
+      "name": "Naum Sherel",
+      "subtitle": "Zakharia’s son",
+      "notes": "Father of Iosif Naumovich Sherel."
     },
     {
       "id": "iosif",
-      "name": "Iosif Sherel",
-      "subtitle": "Iosif Sherel",
-      "notes": "Husband of Olya and father of Grisha, Fima and Klava. According to family memories, he was chairman of a collective farm."
+      "name": "Iosif Naumovich Sherel",
+      "subtitle": "1895 · Son of Naum",
+      "notes": "Husband of Olya and father of Grisha, Fima and Klava. According to family memories, he was chairman of a collective farm. Received the Medal for the Defence of Stalingrad and was recommended for the Medal for Combat Merit in July 1945."
     },
     {
       "id": "olya",
@@ -38,9 +44,9 @@
     },
     {
       "id": "grisha",
-      "name": "Grigory (Grisha) Sherel",
-      "subtitle": "1921 · Orinin",
-      "notes": "Son of Iosif and Olya. Married Dasha Berman on 28 December 1949. Father of Igor and Nelia. Died in the seventies."
+      "name": "Grigory (Grisha) Iosifovich Sherel",
+      "subtitle": "1924–1974 · Orinin",
+      "notes": "Son of Iosif and Olya. Married Dasha Berman on 28 December 1949. Father of Igor and Nelia. Died in Orinin, Ukraine, in 1974. Served from August 1942 and received the Medal for Courage and the Medal for the Defence of the Caucasus."
     },
     {
       "id": "pima-children",
@@ -180,6 +186,5 @@
       "subtitle": "Gena · Son of Nelia and Fima",
       "notes": "Immigrated to Israel in 1991 with his parents Nelia and Fima and his grandmother Dasha."
     }
-  ],
-  "ancestryLabel": "Earlier generations of the Sherel family"
+  ]
 }
