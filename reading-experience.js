@@ -36,7 +36,7 @@
     back.textContent=returns.length?'חזרה למקום הקודם':'חזרה לתוכן העניינים';
   };
   window.addEventListener('popstate',()=>{const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(target){reveal(target);target.scrollIntoView({behavior:'instant'});}});
-  document.addEventListener('story-ready',()=>{
+  function setupStories(){
     panels={sherel:document.getElementById('sherel'),berman:document.getElementById('berman')};
     group=document.createElement('section');group.id='family-stories';group.setAttribute('aria-label','שני סיפורי המשפחה');
     const intro=document.createElement('p');intro.className='parallel-intro';intro.textContent='שני ענפים, שני סיפורים. בחרו משפחה לקריאה; שניהם נפגשים בהמשך, בנישואי גרישה ודשה.';
@@ -51,5 +51,7 @@
     panels.sherel.before(group);group.append(intro,strip,panels.sherel,panels.berman);activate('sherel');
     const together=document.createElement('a');together.href='#together';together.className='continue-together';together.textContent='אל הסיפור המשותף של גרישה ודשה';group.append(together);
     if(location.hash){let target=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(target){reveal(target);requestAnimationFrame(()=>target.scrollIntoView({behavior:'instant'}));}}
-  },{once:true});
+  }
+  if(document.getElementById('sherel'))setupStories();
+  else document.addEventListener('story-ready',setupStories,{once:true});
 })();
