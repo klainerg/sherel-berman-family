@@ -2,7 +2,7 @@
 (()=>{
   const root=document.getElementById('tree');if(!root)return;
   const make=(tag,text,cls)=>{const e=document.createElement(tag);if(text)e.textContent=text;if(cls)e.className=cls;return e;};
-  const heading=make('h2','עץ המשפחה');root.append(heading,make('p','שני ענפים נפגשים בגרישה ודשה, וממשיכים אל הדורות הבאים. גררו לכל כיוון; בטלפון אפשר לצבוט בשתי אצבעות להגדלה. לחצו על שם לפרטים ולמעבר לסיפור.'));
+  const heading=make('h2','עץ המשפחה');const headingRow=make('div',null,'tree-heading-row');const home=make('a','חזרה להתחלה','tree-home');home.href='#home';headingRow.append(heading,home);root.append(headingRow,make('p','שני ענפים נפגשים בגרישה ודשה, וממשיכים אל הדורות הבאים. גררו לכל כיוון; בטלפון אפשר לצבוט בשתי אצבעות להגדלה. לחצו על שם לפרטים ולמעבר לסיפור.'));
   const controls=make('div',null,'tree-controls');controls.setAttribute('role','group');controls.setAttribute('aria-label','ניווט בעץ המשפחה');
   const viewport=make('div',null,'tree-viewport');viewport.tabIndex=0;viewport.setAttribute('role','region');viewport.setAttribute('aria-label','עץ משפחה שניתן להזיז ולהגדיל');viewport.setAttribute('aria-describedby','tree-help');
   const canvas=make('div',null,'tree-canvas');viewport.append(canvas);
