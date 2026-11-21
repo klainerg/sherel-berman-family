@@ -1,0 +1,7 @@
+[
+  {"id":"intro","title":"Two stories that became one family","file":"intro-en.txt","label":"Introduction"},
+  {"id":"sherel","title":"The Sherel family of Orinin","file":"sherel-en.txt","label":"Part one"},
+  {"id":"berman","title":"The Berman and Furman families","file":"berman-en.txt","label":"Part two"},
+  {"id":"together","title":"Two stories become one","file":"together-en.txt","label":"Part three"},
+  {"id":"epilogue","title":"The story that remains","file":"epilogue-en.txt","label":"Epilogue"}
+]
