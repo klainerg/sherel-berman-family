@@ -1,46 +1,410 @@
 {
   "people": [
-    {"id":"zakharia","name":"זכריה שרל","family":"sherel","x":390,"y":10,"subtitle":"סבא רבא של נליה","notes":"בן הדורות המוקדמים של משפחת שרל. תמונתו נשמרה במשפחה.","chapter":"sherel-1"},
-    {"id":"iosif","name":"יוסף שרל","family":"sherel","x":280,"y":190,"subtitle":"Иосиф Шерель","notes":"בעלה של אוליה ואביהם של גרישה, פימה וקלבה. לפי הזיכרון המשפחתי שימש יושב־ראש קולחוז.","chapter":"sherel-1"},
-    {"id":"olya","name":"אוליה שרל","family":"sherel","x":500,"y":190,"subtitle":"Оля","notes":"אשתו של יוסף ואמם של גרישה, פימה וקלבה.","chapter":"sherel-1"},
-    {"id":"pima-sherel","name":"פימה שרל","family":"sherel","x":10,"y":440,"subtitle":"אחיהם של גרישה וקלבה","notes":"בנם של יוסף ואוליה. לפימה שני ילדים המתגוררים בארצות הברית.","chapter":"sherel-4"},
-    {"id":"klava","name":"קלבה גיטר לבית שרל","family":"sherel","x":250,"y":440,"subtitle":"אשתו של חזקאל","notes":"בתם של יוסף ואוליה ואחותם של גרישה ופימה. נישאה לחזקאל גיטר; בנם הוא סאשה.","chapter":"sherel-4"},
-    {"id":"hozkel","name":"חזקאל גיטר","family":"sherel","x":470,"y":440,"subtitle":"Hozkel Giter","notes":"בעלה של קלבה ואביו של סאשה. לפי המסורת המשפחתית שם משפחתו שונה מגיטלר לגיטר.","chapter":"sherel-4"},
-    {"id":"grisha","name":"גריגורי (גרישה) שרל","family":"sherel","x":740,"y":440,"subtitle":"1921 · אורינין","notes":"בנם של יוסף ואוליה. נישא לדשה ברמן ב־28 בדצמבר 1949. אביהם של איגור ונליה. נפטר בשנות השבעים.","chapter":"together-1"},
-    {"id":"pima-children","name":"שני ילדיו של פימה","family":"sherel","x":10,"y":750,"subtitle":"מתגוררים בארצות הברית","notes":"שני ילדיו של פימה שרל, אחיו של גרישה.","chapter":"sherel-4"},
-    {"id":"sasha","name":"סאשה גיטר","family":"sherel","x":360,"y":750,"subtitle":"Sasha · בנם של קלבה וחזקאל","notes":"בנם של קלבה וחזקאל גיטר. עבר בהמשך לארצות הברית. נשמרה תמונת ילדות שלו עם בן דודו איגור שרל.","chapter":"together-2"},
-    {"id":"avrum","name":"אברום (אברהם) פורמן","family":"berman","x":1900,"y":10,"subtitle":"אבי משפחת פורמן","notes":"בין ילדיו היו אווה, רוזה ושמיירה.","chapter":"berman-1"},
-    {"id":"eva","name":"אווה ברמן לבית פורמן","family":"berman","x":1280,"y":190,"subtitle":"Ева Абрамовна Фурман","notes":"בתו של אברום, אחותם של רוזה ושמיירה ואשתו של ישראל (איזיה) ברמן. אמם של דשה, גרישה וגלוצ׳קה.","chapter":"berman-1"},
-    {"id":"izia","name":"ישראל (איזיה) ברמן","family":"berman","x":1500,"y":190,"subtitle":"1895 · נעדר מאז יוני 1941","notes":"בעלה של אווה ואביהם של דשה, גרישה וגלוצ׳קה. המשפחה המשיכה לחפש מידע על גורלו גם לאחר המלחמה.","chapter":"berman-3"},
-    {"id":"dasha","name":"דשה שרל לבית ברמן","family":"berman","x":980,"y":440,"subtitle":"10.6.1926","notes":"בתם של אווה וישראל ברמן. נישאה לגרישה שרל ב־28 בדצמבר 1949. אמם של איגור ונליה. עלתה לישראל ב־1991 עם נליה, פימה וגנה.","chapter":"together-1"},
-    {"id":"grisha-berman","name":"גרישה ברמן","family":"berman","x":1500,"y":440,"subtitle":"1928 · אחיה של דשה","notes":"בנם של אווה וישראל ברמן. שרד עם אמו ודשה את מסע הפינוי. גרישה ברמן הוא אחיה של דשה; גרישה שרל הוא בעלה.","chapter":"berman-1"},
-    {"id":"galochka","name":"גלוצ׳קה ברמן","family":"berman","x":1720,"y":440,"subtitle":"בתם הצעירה של אווה ואיזיה","notes":"מתה על דוברה במהלך הפינוי מאזור סטלינגרד מזרחה.","chapter":"berman-5"},
-    {"id":"roza","name":"רוזה דיק לבית פורמן","family":"berman","x":1980,"y":190,"subtitle":"אחותם של אווה ושמיירה","notes":"בתו של אברום ואשתו של סניה דיק. אמם של בלה, יאשה ובוריס. עבדה כאחות באקטיובינסק ואיתרה את אווה וילדיה.","chapter":"berman-7"},
-    {"id":"senya","name":"סניה דיק","family":"berman","x":2200,"y":190,"subtitle":"Сеня Дик","notes":"בעלה של רוזה ואביהם של בלה, יאשה ובוריס.","chapter":"berman-7"},
-    {"id":"bella","name":"בלה דיק","family":"berman","x":1980,"y":440,"subtitle":"בתם של רוזה וסניה","notes":"אחותם של יאשה ובוריס.","chapter":"berman-7"},
-    {"id":"yasha","name":"יאשה דיק","family":"berman","x":2200,"y":440,"subtitle":"בנם של רוזה וסניה","notes":"אחיהם של בלה ובוריס.","chapter":"berman-7"},
-    {"id":"boris","name":"בוריס דיק","family":"berman","x":2420,"y":440,"subtitle":"בנם של רוזה וסניה","notes":"אחיהם של בלה ויאשה.","chapter":"berman-7"},
-    {"id":"shmeyra","name":"שמיירה פורמן","family":"berman","x":2700,"y":190,"subtitle":"אחיהן של אווה ורוזה","notes":"בנו של אברום ובעלה של חונה. לפי העדות המשפחתית נרצח עם בני משפחתו בתקופת הכיבוש הגרמני.","chapter":"berman-8"},
-    {"id":"hona","name":"חונה פורמן","family":"berman","x":2920,"y":190,"subtitle":"Хона","notes":"אשתו של שמיירה. לפי העדות המשפחתית נרצחה עם בני משפחתה בתקופת הכיבוש.","chapter":"berman-8"},
-    {"id":"dasha-cousin","name":"דשה פורמן","family":"berman","x":2700,"y":440,"subtitle":"מילדיהם של שמיירה וחונה","notes":"נזכרת בעדות המשפחתית בין ילדיהם של שמיירה וחונה. שמות דשה וגרישה חזרו במשפחה.","chapter":"berman-8"},
-    {"id":"grisha-cousin","name":"גרישה פורמן","family":"berman","x":2920,"y":440,"subtitle":"מילדיהם של שמיירה וחונה","notes":"נזכר בעדות המשפחתית בין ילדיהם של שמיירה וחונה. שמות דשה וגרישה חזרו במשפחה.","chapter":"berman-8"},
-    {"id":"igor","name":"איגור שרל","family":"together","x":740,"y":750,"subtitle":"הבן הבכור · נפטר ב־1990","notes":"בנם הבכור של גרישה ודשה ואחיה של נליה. התגורר בקמנץ־פודולסקי עם אמו דשה. נפטר בשנת 1990.","chapter":"together-3"},
-    {"id":"nelia","name":"נליה קליינר לבית שרל","family":"together","x":980,"y":750,"subtitle":"1957 · בתם של גרישה ודשה","notes":"אחותו הצעירה של איגור ואשתו של פימה קליינר. התגוררה בצ׳רנוביץ. עלתה לישראל ב־1991 עם דשה, פימה ובנם גנה.","chapter":"together-3"},
-    {"id":"fima-kleiner","name":"פימה קליינר","family":"together","x":1200,"y":750,"subtitle":"בנם של שיקה ואניה","notes":"בעלה של נליה ואביו של גנה. בנם של שיקה קליינר ואניה בזנוס, ממשפחת קליינר שמוצאה בסוקיריאני.","chapter":"together-3"},
-    {"id":"shika","name":"שיקה קליינר","family":"together","x":1980,"y":600,"subtitle":"אביו של פימה קליינר","notes":"בעלה של אניה בזנוס ואביו של פימה קליינר. סיפורו מופיע באתר משפחת קליינר.","chapter":"together-3"},
-    {"id":"ania","name":"אניה קליינר לבית בזנוס","family":"together","x":2200,"y":600,"subtitle":"אמו של פימה קליינר","notes":"אשתו של שיקה קליינר ואמו של פימה קליינר.","chapter":"together-3"},
-    {"id":"gena","name":"גנה קליינר","family":"together","x":1090,"y":1000,"subtitle":"Гена · בנם של נליה ופימה","notes":"עלה לישראל בשנת 1991 עם הוריו נליה ופימה ועם סבתו דשה.","chapter":"together-3"}
+    {
+      "id": "zakharia",
+      "name": "זכריה שרל",
+      "family": "sherel",
+      "x": 390,
+      "y": 10,
+      "subtitle": "סבא רבא של נליה",
+      "notes": "בן הדורות המוקדמים של משפחת שרל. תמונתו נשמרה במשפחה.",
+      "chapter": "sherel-1"
+    },
+    {
+      "id": "iosif",
+      "name": "יוסף שרל",
+      "family": "sherel",
+      "x": 280,
+      "y": 190,
+      "subtitle": "Иосиф Шерель",
+      "notes": "בעלה של אוליה ואביהם של גרישה, פימה וקלבה. לפי הזיכרון המשפחתי שימש יושב־ראש קולחוז.",
+      "chapter": "sherel-1"
+    },
+    {
+      "id": "olya",
+      "name": "אוליה שרל",
+      "family": "sherel",
+      "x": 500,
+      "y": 190,
+      "subtitle": "Оля",
+      "notes": "אשתו של יוסף ואמם של גרישה, פימה וקלבה.",
+      "chapter": "sherel-1"
+    },
+    {
+      "id": "pima-sherel",
+      "name": "פימה שרל",
+      "family": "sherel",
+      "x": 10,
+      "y": 440,
+      "subtitle": "אחיהם של גרישה וקלבה",
+      "notes": "בנם של יוסף ואוליה. לפימה שני ילדים המתגוררים בארצות הברית.",
+      "chapter": "sherel-4"
+    },
+    {
+      "id": "klava",
+      "name": "קלבה גיטר לבית שרל",
+      "family": "sherel",
+      "x": 250,
+      "y": 440,
+      "subtitle": "אשתו של חזקאל",
+      "notes": "בתם של יוסף ואוליה ואחותם של גרישה ופימה. נישאה לחזקאל גיטר; בנם הוא סאשה.",
+      "chapter": "sherel-4"
+    },
+    {
+      "id": "hozkel",
+      "name": "חזקאל גיטר",
+      "family": "sherel",
+      "x": 470,
+      "y": 440,
+      "subtitle": "Hozkel Giter",
+      "notes": "בעלה של קלבה ואביו של סאשה. לפי המסורת המשפחתית שם משפחתו שונה מגיטלר לגיטר.",
+      "chapter": "sherel-4"
+    },
+    {
+      "id": "grisha",
+      "name": "גריגורי (גרישה) שרל",
+      "family": "sherel",
+      "x": 740,
+      "y": 440,
+      "subtitle": "1921 · אורינין",
+      "notes": "בנם של יוסף ואוליה. נישא לדשה ברמן ב־28 בדצמבר 1949. אביהם של איגור ונליה. נפטר בשנות השבעים.",
+      "chapter": "together-1"
+    },
+    {
+      "id": "pima-children",
+      "name": "שני ילדיו של פימה",
+      "family": "sherel",
+      "x": 10,
+      "y": 750,
+      "subtitle": "מתגוררים בארצות הברית",
+      "notes": "שני ילדיו של פימה שרל, אחיו של גרישה.",
+      "chapter": "sherel-4"
+    },
+    {
+      "id": "sasha",
+      "name": "סאשה גיטר",
+      "family": "sherel",
+      "x": 360,
+      "y": 750,
+      "subtitle": "Sasha · בנם של קלבה וחזקאל",
+      "notes": "בנם של קלבה וחזקאל גיטר. עבר בהמשך לארצות הברית. נשמרה תמונת ילדות שלו עם בן דודו איגור שרל.",
+      "chapter": "together-2"
+    },
+    {
+      "id": "avrum",
+      "name": "אברום (אברהם) פורמן",
+      "family": "berman",
+      "x": 1900,
+      "y": 10,
+      "subtitle": "אבי משפחת פורמן",
+      "notes": "בין ילדיו היו אווה, רוזה ושמיירה.",
+      "chapter": "berman-1"
+    },
+    {
+      "id": "eva",
+      "name": "אווה ברמן לבית פורמן",
+      "family": "berman",
+      "x": 1280,
+      "y": 190,
+      "subtitle": "Ева Абрамовна Фурман",
+      "notes": "בתו של אברום, אחותם של רוזה ושמיירה ואשתו של ישראל (איזיה) ברמן. אמם של דשה, גרישה וגלוצ׳קה.",
+      "chapter": "berman-1"
+    },
+    {
+      "id": "izia",
+      "name": "ישראל (איזיה) ברמן",
+      "family": "berman",
+      "x": 1500,
+      "y": 190,
+      "subtitle": "1895 · נעדר מאז יוני 1941",
+      "notes": "בעלה של אווה ואביהם של דשה, גרישה וגלוצ׳קה. המשפחה המשיכה לחפש מידע על גורלו גם לאחר המלחמה.",
+      "chapter": "berman-3"
+    },
+    {
+      "id": "dasha",
+      "name": "דשה שרל לבית ברמן",
+      "family": "berman",
+      "x": 980,
+      "y": 440,
+      "subtitle": "10.6.1926",
+      "notes": "בתם של אווה וישראל ברמן. נישאה לגרישה שרל ב־28 בדצמבר 1949. אמם של איגור ונליה. עלתה לישראל ב־1991 עם נליה, פימה וגנה.",
+      "chapter": "together-1"
+    },
+    {
+      "id": "grisha-berman",
+      "name": "גרישה ברמן",
+      "family": "berman",
+      "x": 1500,
+      "y": 440,
+      "subtitle": "1928 · אחיה של דשה",
+      "notes": "בנם של אווה וישראל ברמן. שרד עם אמו ודשה את מסע הפינוי. גרישה ברמן הוא אחיה של דשה; גרישה שרל הוא בעלה.",
+      "chapter": "berman-1"
+    },
+    {
+      "id": "galochka",
+      "name": "גלוצ׳קה ברמן",
+      "family": "berman",
+      "x": 1720,
+      "y": 440,
+      "subtitle": "בתם הצעירה של אווה ואיזיה",
+      "notes": "מתה על דוברה במהלך הפינוי מאזור סטלינגרד מזרחה.",
+      "chapter": "berman-5"
+    },
+    {
+      "id": "roza",
+      "name": "רוזה דיק לבית פורמן",
+      "family": "berman",
+      "x": 1980,
+      "y": 190,
+      "subtitle": "אחותם של אווה ושמיירה",
+      "notes": "בתו של אברום ואשתו של סניה דיק. אמם של בלה, ישה וברוניה. עבדה כאחות באקטיובינסק ואיתרה את אווה וילדיה.",
+      "chapter": "berman-7"
+    },
+    {
+      "id": "senya",
+      "name": "סניה דיק",
+      "family": "berman",
+      "x": 2200,
+      "y": 190,
+      "subtitle": "Сеня Дик",
+      "notes": "בעלה של רוזה ואביהם של בלה, ישה וברוניה.",
+      "chapter": "berman-7"
+    },
+    {
+      "id": "bella",
+      "name": "בלה דיק",
+      "family": "berman",
+      "x": 1980,
+      "y": 440,
+      "subtitle": "בתם של רוזה וסניה",
+      "notes": "אחותם של ישה וברוניה.",
+      "chapter": "berman-7"
+    },
+    {
+      "id": "yasha",
+      "name": "ישה דיק",
+      "family": "berman",
+      "x": 2200,
+      "y": 440,
+      "subtitle": "בנם של רוזה וסניה",
+      "notes": "אחיהן של בלה וברוניה.",
+      "chapter": "berman-7"
+    },
+    {
+      "id": "bronya",
+      "name": "ברוניה דיק",
+      "family": "berman",
+      "x": 2420,
+      "y": 440,
+      "subtitle": "בתם של רוזה וסניה",
+      "notes": "אחותם של בלה וישה.",
+      "chapter": "berman-7"
+    },
+    {
+      "id": "shmeyra",
+      "name": "שמיירה פורמן",
+      "family": "berman",
+      "x": 2700,
+      "y": 190,
+      "subtitle": "אחיהן של אווה ורוזה",
+      "notes": "בנו של אברום ובעלה של חונה. לפי העדות המשפחתית נרצח עם בני משפחתו בתקופת הכיבוש הגרמני.",
+      "chapter": "berman-8"
+    },
+    {
+      "id": "hona",
+      "name": "חונה פורמן",
+      "family": "berman",
+      "x": 2920,
+      "y": 190,
+      "subtitle": "Хона",
+      "notes": "אשתו של שמיירה. לפי העדות המשפחתית נרצחה עם בני משפחתה בתקופת הכיבוש.",
+      "chapter": "berman-8"
+    },
+    {
+      "id": "dasha-cousin",
+      "name": "דשה פורמן",
+      "family": "berman",
+      "x": 2700,
+      "y": 440,
+      "subtitle": "מילדיהם של שמיירה וחונה",
+      "notes": "נזכרת בעדות המשפחתית בין ילדיהם של שמיירה וחונה. שמות דשה וגרישה חזרו במשפחה.",
+      "chapter": "berman-8"
+    },
+    {
+      "id": "grisha-cousin",
+      "name": "גרישה פורמן",
+      "family": "berman",
+      "x": 2920,
+      "y": 440,
+      "subtitle": "מילדיהם של שמיירה וחונה",
+      "notes": "נזכר בעדות המשפחתית בין ילדיהם של שמיירה וחונה. שמות דשה וגרישה חזרו במשפחה.",
+      "chapter": "berman-8"
+    },
+    {
+      "id": "igor",
+      "name": "איגור שרל",
+      "family": "together",
+      "x": 740,
+      "y": 750,
+      "subtitle": "הבן הבכור · נפטר ב־1990",
+      "notes": "בנם הבכור של גרישה ודשה ואחיה של נליה. התגורר בקמנץ־פודולסקי עם אמו דשה. נפטר בשנת 1990.",
+      "chapter": "together-3"
+    },
+    {
+      "id": "nelia",
+      "name": "נליה קליינר לבית שרל",
+      "family": "together",
+      "x": 980,
+      "y": 750,
+      "subtitle": "1957 · בתם של גרישה ודשה",
+      "notes": "אחותו הצעירה של איגור ואשתו של פימה קליינר. התגוררה בצ׳רנוביץ. עלתה לישראל ב־1991 עם דשה, פימה ובנם גנה.",
+      "chapter": "together-3"
+    },
+    {
+      "id": "fima-kleiner",
+      "name": "פימה קליינר",
+      "family": "together",
+      "x": 1200,
+      "y": 750,
+      "subtitle": "בנם של שיקה ואניה",
+      "notes": "בעלה של נליה ואביו של גנה. בנם של שיקה קליינר ואניה בזנוס, ממשפחת קליינר שמוצאה בסוקיריאני.",
+      "chapter": "together-3"
+    },
+    {
+      "id": "shika",
+      "name": "שיקה קליינר",
+      "family": "together",
+      "x": 1980,
+      "y": 600,
+      "subtitle": "אביו של פימה קליינר",
+      "notes": "בעלה של אניה בזנוס ואביו של פימה קליינר. סיפורו מופיע באתר משפחת קליינר.",
+      "chapter": "together-3"
+    },
+    {
+      "id": "ania",
+      "name": "אניה קליינר לבית בזנוס",
+      "family": "together",
+      "x": 2200,
+      "y": 600,
+      "subtitle": "אמו של פימה קליינר",
+      "notes": "אשתו של שיקה קליינר ואמו של פימה קליינר.",
+      "chapter": "together-3"
+    },
+    {
+      "id": "gena",
+      "name": "גנה קליינר",
+      "family": "together",
+      "x": 1090,
+      "y": 1000,
+      "subtitle": "Гена · בנם של נליה ופימה",
+      "notes": "עלה לישראל בשנת 1991 עם הוריו נליה ופימה ועם סבתו דשה.",
+      "chapter": "together-3"
+    }
   ],
-  "couples":[
-    {"partners":["iosif","olya"],"children":["pima-sherel","klava","grisha"]},
-    {"partners":["klava","hozkel"],"children":["sasha"]},
-    {"partners":["eva","izia"],"children":["dasha","grisha-berman","galochka"]},
-    {"partners":["roza","senya"],"children":["bella","yasha","boris"]},
-    {"partners":["shmeyra","hona"],"children":["dasha-cousin","grisha-cousin"]},
-    {"partners":["grisha","dasha"],"children":["igor","nelia"],"label":"28.12.1949"},
-    {"partners":["nelia","fima-kleiner"],"children":["gena"]},
-    {"partners":["shika","ania"],"children":["fima-kleiner"]}
+  "couples": [
+    {
+      "partners": [
+        "iosif",
+        "olya"
+      ],
+      "children": [
+        "pima-sherel",
+        "klava",
+        "grisha"
+      ]
+    },
+    {
+      "partners": [
+        "klava",
+        "hozkel"
+      ],
+      "children": [
+        "sasha"
+      ]
+    },
+    {
+      "partners": [
+        "eva",
+        "izia"
+      ],
+      "children": [
+        "dasha",
+        "grisha-berman",
+        "galochka"
+      ]
+    },
+    {
+      "partners": [
+        "roza",
+        "senya"
+      ],
+      "children": [
+        "bella",
+        "yasha",
+        "bronya"
+      ]
+    },
+    {
+      "partners": [
+        "shmeyra",
+        "hona"
+      ],
+      "children": [
+        "dasha-cousin",
+        "grisha-cousin"
+      ]
+    },
+    {
+      "partners": [
+        "grisha",
+        "dasha"
+      ],
+      "children": [
+        "igor",
+        "nelia"
+      ],
+      "label": "28.12.1949"
+    },
+    {
+      "partners": [
+        "nelia",
+        "fima-kleiner"
+      ],
+      "children": [
+        "gena"
+      ]
+    },
+    {
+      "partners": [
+        "shika",
+        "ania"
+      ],
+      "children": [
+        "fima-kleiner"
+      ]
+    }
   ],
-  "parents":[{"parent":"avrum","children":["eva","roza","shmeyra"]},{"parent":"pima-sherel","children":["pima-children"]}],
-  "ancestry":[{"from":"zakharia","to":"iosif","label":"דורות מוקדמים של משפחת שרל"}]
+  "parents": [
+    {
+      "parent": "avrum",
+      "children": [
+        "eva",
+        "roza",
+        "shmeyra"
+      ]
+    },
+    {
+      "parent": "pima-sherel",
+      "children": [
+        "pima-children"
+      ]
+    }
+  ],
+  "ancestry": [
+    {
+      "from": "zakharia",
+      "to": "iosif",
+      "label": "דורות מוקדמים של משפחת שרל"
+    }
+  ]
 }

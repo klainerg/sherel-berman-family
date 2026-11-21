@@ -2,16 +2,16 @@
 .language-switch{display:flex;justify-content:center;gap:8px;margin:12px 0 24px;font-family:Arial,sans-serif}
 .language-switch button{font-size:1rem;min-height:46px;padding:10px 22px;background:transparent;border:1px solid var(--line);border-radius:4px;color:var(--ink)}
 .language-switch button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-html[lang=ru] .book{direction:rtl}
-html[lang=ru] .book>aside,html[lang=ru] #story{direction:ltr}
-html[lang=ru] .person-node{direction:ltr;font-size:19px;height:148px;min-height:148px}
-html[lang=ru] .person-node small{font-size:14px;line-height:1.35}
-html[lang=ru] .tree-list button{text-align:left}
-html[lang=ru] .related-story{border-inline-start:2px solid var(--accent);border-inline-end:0}
-html[lang=ru] .masthead{flex-wrap:wrap}
-html[lang=ru] h1{font-size:clamp(40px,6vw,78px)}
-html[lang=ru] .family-tabs button{font-size:1rem}
-@media(max-width:800px){html[lang=ru] .masthead nav{font-size:.85rem;gap:12px}html[lang=ru] .reading-tools button{font-size:.85rem;max-width:240px}html[lang=ru] .family-tabs button{padding:10px 8px;font-size:.95rem}}
+html[dir=ltr] .book{direction:rtl}
+html[dir=ltr] .book>aside,html[dir=ltr] #story{direction:ltr}
+html[dir=ltr] .person-node{direction:ltr;font-size:19px;height:148px;min-height:148px}
+html[dir=ltr] .person-node small{font-size:14px;line-height:1.35}
+html[dir=ltr] .tree-list button{text-align:left}
+html[dir=ltr] .related-story{border-inline-start:2px solid var(--accent);border-inline-end:0}
+html[dir=ltr] .masthead{flex-wrap:wrap}
+html[dir=ltr] h1{font-size:clamp(40px,6vw,78px)}
+html[dir=ltr] .family-tabs button{font-size:1rem}
+@media(max-width:800px){html[dir=ltr] .masthead nav{font-size:.85rem;gap:12px}html[dir=ltr] .reading-tools button{font-size:.85rem;max-width:240px}html[dir=ltr] .family-tabs button{padding:10px 8px;font-size:.95rem}}
 .tree-heading-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:18px}
 .tree-heading-row h2{margin:0}
 .tree-home{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 24px;border-radius:6px;background:var(--ink);color:var(--paper);font-size:1.15rem;text-decoration:none}

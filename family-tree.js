@@ -40,9 +40,9 @@
   viewport.addEventListener('keydown',e=>{const moves={ArrowLeft:[50,0],ArrowRight:[-50,0],ArrowUp:[0,50],ArrowDown:[0,-50]};if(moves[e.key]){e.preventDefault();tx+=moves[e.key][0];ty+=moves[e.key][1];draw();}if(['+','=','-','−'].includes(e.key)){e.preventDefault();zoomAt(['+','='].includes(e.key)?1.25:.8);}});
   function path(d,cls=''){const p=document.createElementNS(svg.namespaceURI,'path');p.setAttribute('d',d);if(cls)p.setAttribute('class',cls);svg.append(p);}
   function text(x,y,value){const t=document.createElementNS(svg.namespaceURI,'text');t.setAttribute('x',x);t.setAttribute('y',y);t.textContent=value;svg.append(t);}
-  fetch('family-tree.json').then(r=>{if(!r.ok)throw Error('tree');return r.json();}).then(async value=>{
-    if(window.i18n.lang==='ru'){
-      const response=await fetch('family-tree-ru.json?v=20261121-bilingual');if(!response.ok)throw Error('translation');const translated=await response.json();const people=new Map(translated.people.map(p=>[p.id,p]));
+  fetch('family-tree.json?v=20261121-trilingual-bronya').then(r=>{if(!r.ok)throw Error('tree');return r.json();}).then(async value=>{
+    if(window.i18n.lang!=='he'){
+      const response=await fetch('family-tree-'+window.i18n.lang+'.json?v=20261121-trilingual-bronya');if(!response.ok)throw Error('translation');const translated=await response.json();const people=new Map(translated.people.map(p=>[p.id,p]));
       value.people=value.people.map(p=>{if(!people.has(p.id))throw Error('Missing person translation');return {...p,...people.get(p.id)};});value.ancestry=value.ancestry.map(a=>({...a,label:translated.ancestryLabel}));
     }
     data=value;const byId=new Map(data.people.map(p=>[p.id,p]));

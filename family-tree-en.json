@@ -1,0 +1,185 @@
+{
+  "people": [
+    {
+      "id": "zakharia",
+      "name": "Zakharia Sherel",
+      "subtitle": "Nelia’s great-grandfather",
+      "notes": "One of the earlier generations of the Sherel family. His photograph has been preserved in the family."
+    },
+    {
+      "id": "iosif",
+      "name": "Iosif Sherel",
+      "subtitle": "Iosif Sherel",
+      "notes": "Husband of Olya and father of Grisha, Fima and Klava. According to family memories, he was chairman of a collective farm."
+    },
+    {
+      "id": "olya",
+      "name": "Olya Sherel",
+      "subtitle": "Olya",
+      "notes": "Wife of Iosif and mother of Grisha, Fima and Klava."
+    },
+    {
+      "id": "pima-sherel",
+      "name": "Fima Sherel",
+      "subtitle": "Brother of Grisha and Klava",
+      "notes": "Son of Iosif and Olya. Fima has two children who live in the United States."
+    },
+    {
+      "id": "klava",
+      "name": "Klava Giter, née Sherel",
+      "subtitle": "Wife of Hozkel",
+      "notes": "Daughter of Iosif and Olya, sister of Grisha and Fima. Married Hozkel Giter; their son is Sasha."
+    },
+    {
+      "id": "hozkel",
+      "name": "Hozkel Giter",
+      "subtitle": "Hozkel Giter",
+      "notes": "Husband of Klava and father of Sasha. According to family tradition, his surname was changed from Gitler to Giter."
+    },
+    {
+      "id": "grisha",
+      "name": "Grigory (Grisha) Sherel",
+      "subtitle": "1921 · Orinin",
+      "notes": "Son of Iosif and Olya. Married Dasha Berman on 28 December 1949. Father of Igor and Nelia. Died in the seventies."
+    },
+    {
+      "id": "pima-children",
+      "name": "Fima’s two children",
+      "subtitle": "Live in the United States",
+      "notes": "The two children of Fima Sherel, Grisha’s brother."
+    },
+    {
+      "id": "sasha",
+      "name": "Sasha Giter",
+      "subtitle": "Sasha · Son of Klava and Hozkel",
+      "notes": "Son of Klava and Hozkel Giter. Later moved to the United States. A childhood photograph of him with his cousin Igor Sherel has been preserved."
+    },
+    {
+      "id": "avrum",
+      "name": "Avrum (Abraham) Furman",
+      "subtitle": "Head of the Furman family",
+      "notes": "His children included Eva, Roza and Shmeyra."
+    },
+    {
+      "id": "eva",
+      "name": "Eva Berman, née Furman",
+      "subtitle": "Eva Abramovna Furman",
+      "notes": "Daughter of Avrum, sister of Roza and Shmeyra, and wife of Israel (Izia) Berman. Mother of Dasha, Grisha and Galochka."
+    },
+    {
+      "id": "izia",
+      "name": "Israel (Izia) Berman",
+      "subtitle": "1895 · Missing since June 1941",
+      "notes": "Husband of Eva and father of Dasha, Grisha and Galochka. The family continued searching for information about his fate after the war."
+    },
+    {
+      "id": "dasha",
+      "name": "Dasha Sherel, née Berman",
+      "subtitle": "10.6.1926",
+      "notes": "Daughter of Eva and Israel Berman. Married Grisha Sherel on 28 December 1949. Mother of Igor and Nelia. Immigrated to Israel in 1991 with Nelia, Fima and Gena."
+    },
+    {
+      "id": "grisha-berman",
+      "name": "Grisha Berman",
+      "subtitle": "1928 · Dasha’s brother",
+      "notes": "Son of Eva and Israel Berman. Survived the evacuation with his mother and Dasha. Grisha Berman is Dasha’s brother; Grisha Sherel is her husband."
+    },
+    {
+      "id": "galochka",
+      "name": "Galochka Berman",
+      "subtitle": "Youngest daughter of Eva and Izia",
+      "notes": "Died on a barge during evacuation eastward from the Stalingrad area."
+    },
+    {
+      "id": "roza",
+      "name": "Roza Dik, née Furman",
+      "subtitle": "Sister of Eva and Shmeyra",
+      "notes": "Daughter of Avrum and wife of Senya Dik. Mother of Bella, Yasha and Bronya. Worked as a nurse in Aktyubinsk and found Eva and her children."
+    },
+    {
+      "id": "senya",
+      "name": "Senya Dik",
+      "subtitle": "Senya Dik",
+      "notes": "Husband of Roza and father of Bella, Yasha and Bronya."
+    },
+    {
+      "id": "bella",
+      "name": "Bella Dik",
+      "subtitle": "Daughter of Roza and Senya",
+      "notes": "Sister of Yasha and Bronya."
+    },
+    {
+      "id": "yasha",
+      "name": "Yasha Dik",
+      "subtitle": "Son of Roza and Senya",
+      "notes": "Brother of Bella and Bronya."
+    },
+    {
+      "id": "bronya",
+      "name": "Bronya Dik",
+      "subtitle": "Daughter of Roza and Senya",
+      "notes": "Sister of Bella and Yasha."
+    },
+    {
+      "id": "shmeyra",
+      "name": "Shmeyra Furman",
+      "subtitle": "Brother of Eva and Roza",
+      "notes": "Son of Avrum and husband of Khona. According to family testimony, he was murdered with his family during the German occupation."
+    },
+    {
+      "id": "hona",
+      "name": "Khona Furman",
+      "subtitle": "Khona",
+      "notes": "Wife of Shmeyra. According to family testimony, she was murdered with her family during the occupation."
+    },
+    {
+      "id": "dasha-cousin",
+      "name": "Dasha Furman",
+      "subtitle": "One of Shmeyra and Khona’s children",
+      "notes": "Mentioned in family testimony among Shmeyra and Khona’s children. The names Dasha and Grisha recurred in the family."
+    },
+    {
+      "id": "grisha-cousin",
+      "name": "Grisha Furman",
+      "subtitle": "One of Shmeyra and Khona’s children",
+      "notes": "Mentioned in family testimony among Shmeyra and Khona’s children. The names Dasha and Grisha recurred in the family."
+    },
+    {
+      "id": "igor",
+      "name": "Igor Sherel",
+      "subtitle": "Elder son · Died in 1990",
+      "notes": "Elder son of Grisha and Dasha and brother of Nelia. Lived in Kamianets-Podilskyi with his mother Dasha. Died in 1990."
+    },
+    {
+      "id": "nelia",
+      "name": "Nelia Kleiner, née Sherel",
+      "subtitle": "1957 · Daughter of Grisha and Dasha",
+      "notes": "Igor’s younger sister and Fima Kleiner’s wife. Lived in Chernivtsi. Immigrated to Israel in 1991 with Dasha, Fima and their son Gena."
+    },
+    {
+      "id": "fima-kleiner",
+      "name": "Fima Kleiner",
+      "subtitle": "Son of Shika and Ania",
+      "notes": "Husband of Nelia and father of Gena. Son of Shika Kleiner and Ania Beznos, from the Kleiner family whose origins were in Sokyriany."
+    },
+    {
+      "id": "shika",
+      "name": "Shika Kleiner",
+      "subtitle": "Father of Fima Kleiner",
+      "notes": "Husband of Ania Beznos and father of Fima Kleiner. His story appears on the Kleiner family website."
+    },
+    {
+      "id": "ania",
+      "name": "Ania Kleiner, née Beznos",
+      "subtitle": "Mother of Fima Kleiner",
+      "notes": "Wife of Shika Kleiner and mother of Fima Kleiner."
+    },
+    {
+      "id": "gena",
+      "name": "Gena Kleiner",
+      "subtitle": "Gena · Son of Nelia and Fima",
+      "notes": "Immigrated to Israel in 1991 with his parents Nelia and Fima and his grandmother Dasha."
+    }
+  ],
+  "ancestryLabel": "Earlier generations of the Sherel family"
+}

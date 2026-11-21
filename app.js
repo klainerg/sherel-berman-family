@@ -2,7 +2,7 @@
 'use strict';
 const el=(tag,text,className)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(className)node.className=className;return node;};
 const safeName=name=>/^[a-zA-Z0-9][a-zA-Z0-9_.-]*$/.test(name)&&!name.includes('..');
-const fetchFile=async(path,json=false)=>{const r=await fetch(path+'?v=20261121-bilingual',{cache:'no-store'});if(!r.ok)throw new Error(path);return json?r.json():r.text();};
+const fetchFile=async(path,json=false)=>{const r=await fetch(path+'?v=20261121-trilingual-bronya',{cache:'no-store'});if(!r.ok)throw new Error(path);return json?r.json():r.text();};
 let sourceMap=new Map();
 let references=new Map();
 let zoom=1;
@@ -37,11 +37,11 @@ function renderChapter(chapter,text){
 async function init(){
   const story=document.querySelector('#story');
   try{
-    const [chapters,sources]=await Promise.all([fetchFile(window.i18n.lang==='ru'?'content/chapters-ru.json':'content/chapters.json',true),fetchFile(window.i18n.lang==='ru'?'content/sources-ru.json':'content/sources.json',true)]);
+    const [chapters,sources]=await Promise.all([fetchFile('content/chapters'+(window.i18n.lang==='he'?'':'-'+window.i18n.lang)+'.json',true),fetchFile('content/sources'+(window.i18n.lang==='he'?'':'-'+window.i18n.lang)+'.json',true)]);
     sources.forEach((s,i)=>sourceMap.set(s.id,{...s,number:i+1}));
     const results=await Promise.all(chapters.map(async c=>{if(!safeName(c.file)||! /^[a-z][a-z0-9-]*$/.test(c.id))throw new Error('chapter');return renderChapter(c,await fetchFile(`content/${c.file}`));}));
     story.replaceChildren(...results);
-    const related=el('div',undefined,'related-story');related.append(el('span',window.i18n.t('המשך הסיפור המשפחתי: ')));const familyLink=el('a',window.i18n.t('שורשי משפחת קליינר'));familyLink.href='https://klainerg.github.io/kleiner-family/'+(window.i18n.lang==='ru'?'?lang=ru':'');familyLink.target='_blank';familyLink.rel='noopener noreferrer';related.append(familyLink);document.querySelector('#together').append(related);
+    const related=el('div',undefined,'related-story');related.append(el('span',window.i18n.t('המשך הסיפור המשפחתי: ')));const familyLink=el('a',window.i18n.t('שורשי משפחת קליינר'));familyLink.href='https://klainerg.github.io/kleiner-family/'+(window.i18n.lang==='he'?'':'?lang='+window.i18n.lang);familyLink.target='_blank';familyLink.rel='noopener noreferrer';related.append(familyLink);document.querySelector('#together').append(related);
     const nav=document.querySelector('#chapter-nav');chapters.forEach(c=>{const a=el('a',c.title);a.href=`#${c.id}`;nav.append(a);});
     const list=document.querySelector('#source-list');sources.forEach(s=>{const li=el('li');li.id=`source-${s.id}`;li.append(el('strong',s.title),el('div',s.note));if(s.url){try{const url=new URL(s.url);if(['http:','https:'].includes(url.protocol)){const a=el('a',window.i18n.t('פתיחת המקור'));a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';li.append(a);}}catch{}}else li.append(el('span',window.i18n.t('פרטי ההפניה טרם צורפו'),'source-status'));(references.get(s.id)||[]).forEach((id,i)=>{const a=el('a',` ${window.i18n.t('חזרה לסיפור')}${i?' '+(i+1):''} ↩`);a.href=`#${id}`;li.append(a);});list.append(li);});
     const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){nav.querySelectorAll('a').forEach(a=>{const active=a.hash===`#${entry.target.id}`;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}}},{rootMargin:'-10% 0px -65% 0px'});results.forEach(a=>observer.observe(a));
