@@ -1,0 +1,7 @@
+[
+  {"id":"intro","title":"Две истории, ставшие одной семьёй","file":"intro-ru.txt","label":"Вступление"},
+  {"id":"sherel","title":"Семья Шерель из Оринина","file":"sherel-ru.txt","label":"Часть первая"},
+  {"id":"berman","title":"Семьи Берман и Фурман","file":"berman-ru.txt","label":"Часть вторая"},
+  {"id":"together","title":"Две истории становятся одной","file":"together-ru.txt","label":"Часть третья"},
+  {"id":"epilogue","title":"История, которая осталась","file":"epilogue-ru.txt","label":"Послесловие"}
+]
