@@ -1,4 +1,6 @@
 [hidden]{display:none!important}
+.hero-tree-link{display:inline-flex;justify-content:center;align-items:center;min-height:54px;padding:14px 30px;border:1px solid var(--ink);border-radius:6px;background:var(--ink);color:var(--paper);font:1.2rem Arial,sans-serif;text-decoration:none;margin:0 0 16px}
+.hero-tree-link:hover{background:#3d574c}
 article p{font-size:1.4rem;line-height:1.95}
 article h3{font-size:1.85rem}
 .subtitle{font-size:1.35rem}
