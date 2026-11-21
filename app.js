@@ -45,7 +45,7 @@ async function init(){
     const nav=document.querySelector('#chapter-nav');chapters.forEach(c=>{const a=el('a',c.title);a.href=`#${c.id}`;nav.append(a);});
     const list=document.querySelector('#source-list');sources.forEach(s=>{const li=el('li');li.id=`source-${s.id}`;li.append(el('strong',s.title),el('div',s.note));if(s.url){try{const url=new URL(s.url);if(['http:','https:'].includes(url.protocol)){const a=el('a','פתיחת המקור');a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';li.append(a);}}catch{}}else li.append(el('span','פרטי ההפניה טרם צורפו','source-status'));(references.get(s.id)||[]).forEach((id,i)=>{const a=el('a',` חזרה לסיפור${i?' '+(i+1):''} ↩`);a.href=`#${id}`;li.append(a);});list.append(li);});
     const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){nav.querySelectorAll('a').forEach(a=>{const active=a.hash===`#${entry.target.id}`;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}}},{rootMargin:'-10% 0px -65% 0px'});results.forEach(a=>observer.observe(a));
-    if(location.hash){requestAnimationFrame(()=>document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView());}
+    document.dispatchEvent(new Event('story-ready'));
   }catch(error){story.replaceChildren(el('p','לא ניתן לטעון את הסיפור כעת. יש לרענן את הדף. לתצוגה מקומית יש לפתוח דרך שרת תצוגה ולא בלחיצה כפולה על הקובץ.'));console.error('טעינת תוכן נכשלה',error);}
 }
 init();

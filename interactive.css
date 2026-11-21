@@ -1,0 +1,57 @@
+[hidden]{display:none!important}
+article p{font-size:1.4rem;line-height:1.95}
+article h3{font-size:1.85rem}
+.subtitle{font-size:1.35rem}
+.masthead nav{font-size:1rem}
+#chapter-nav a{font-size:1rem}
+.sources p,.sources li{font-size:1.15rem}
+figcaption{font-size:1rem}
+.book{grid-template-columns:220px minmax(0,760px);gap:45px;max-width:1250px;overflow-anchor:none}
+.parallel-intro{font-size:1.1rem;line-height:1.8;color:var(--muted);margin:0 0 24px}
+.family-tabs{position:sticky;top:0;z-index:4;display:flex;gap:6px;padding:12px 0;background:var(--paper);border-bottom:1px solid var(--line);margin-bottom:32px}
+.family-tabs button{flex:1;min-height:52px;padding:12px 18px;font-size:1.1rem;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:4px}
+.family-tabs button[aria-selected=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+#family-stories article{border:0;padding-top:0;margin-top:0;scroll-margin-top:100px}
+#family-stories{border-top:1px solid var(--line);padding-top:40px;margin-bottom:60px}
+article h3,article p[id],sup a{scroll-margin-top:105px}
+.continue-together{display:inline-block;margin-top:12px;color:var(--accent);font-size:1.15rem;padding:14px 0}
+.reading-tools{position:fixed;bottom:18px;left:18px;z-index:8;max-width:calc(100% - 36px)}
+.reading-tools button{background:var(--ink);color:var(--paper);border:1px solid var(--paper);border-radius:6px;box-shadow:0 2px 10px #253c3626;padding:13px 20px;min-height:48px;font-size:1rem}
+footer{padding-bottom:100px}
+.tree-section{max-width:1250px;margin:0 auto 60px;padding:45px 30px;border-top:1px solid var(--line)}
+.tree-section>p{font-size:1.15rem;line-height:1.8;max-width:820px}
+.tree-section h2{margin-bottom:20px}
+.tree-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:22px 0 12px}
+.tree-controls button,.tree-details button,.tree-details a{font-size:1rem;min-height:46px;padding:10px 16px;color:var(--ink);border:1px solid var(--line);background:var(--paper);border-radius:4px}
+.tree-controls button:hover{background:#eee9df}
+.tree-controls [aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.tree-zoom-label{font-size:1rem;min-width:65px;text-align:center;direction:ltr}
+.tree-viewport{height:600px;position:relative;overflow:hidden;border:1px solid #b7b4a5;border-radius:6px;background-color:#eee9df;background-image:radial-gradient(#bdb19b80 1px,transparent 1px);background-size:24px 24px;touch-action:none;cursor:grab;direction:ltr;isolation:isolate}
+.tree-viewport:active{cursor:grabbing}
+.tree-canvas{position:absolute;left:0;top:0;width:3300px;height:1170px;transform-origin:0 0;will-change:transform}
+.tree-lines{position:absolute;inset:0;width:3300px;height:1170px;overflow:visible;pointer-events:none}
+.tree-lines path{fill:none;stroke:#64756c;stroke-width:2.5}
+.tree-lines path.spouse{stroke:#927140;stroke-width:3}
+.tree-lines path.ancestry{stroke-dasharray:7 7;stroke:#99917d}
+.tree-lines text{fill:#6f512b;font:17px Arial,sans-serif;text-anchor:middle;paint-order:stroke;stroke:#eee9df;stroke-width:7px;stroke-linejoin:round}
+.person-node{position:absolute;width:200px;min-height:100px;padding:14px 10px;display:flex;flex-direction:column;justify-content:center;gap:8px;border:1.5px solid #a9b3aa;border-radius:6px;background:#fbf9f3;color:var(--ink);text-align:center;font:22px Arial,sans-serif;line-height:1.3;direction:rtl;touch-action:none;user-select:none}
+.person-node small{font-size:17px;color:#62685f;line-height:1.4}
+.person-node[data-family=berman]{border-color:#b9a37f}
+.person-node[data-family=together]{border-color:#536c60;background:#e5ece4}
+.person-node[data-person=grisha],.person-node[data-person=dasha]{border:3px solid var(--accent)}
+.person-node:focus-visible{outline:4px solid #927140;outline-offset:3px}
+.person-node{height:120px;min-height:120px}
+.tree-legend{display:flex;gap:20px;flex-wrap:wrap;margin:14px 0;font-size:1rem;color:var(--muted)}
+.tree-legend span::before{content:'';display:inline-block;vertical-align:middle;width:30px;border-top:2px solid #64756c;margin-inline-end:8px}
+.tree-legend .marriage::before{border-color:#927140}
+.tree-legend .ancestry::before{border-top-style:dashed;border-color:#99917d}
+.tree-list{margin-top:24px;font-size:1.1rem}
+.tree-list summary{padding:12px 0}
+.tree-list ul{line-height:1.8;padding-inline-start:25px}
+.tree-list button{border:0;border-bottom:1px solid var(--line);color:var(--ink);background:transparent;font:inherit;text-align:right;padding:10px 0}
+.tree-details{max-width:580px;padding:24px;max-height:85dvh}
+.tree-details h3{font-size:1.7rem;margin-top:20px;color:var(--ink)}
+.tree-details p{font-size:1.2rem;line-height:1.8}
+.tree-details a{display:inline-block;text-decoration:none;background:var(--ink);color:var(--paper)}
+@media(max-width:800px){article p{font-size:1.3rem;line-height:1.95}.book{display:block;padding-inline:20px}.family-tabs{gap:5px;padding-top:8px}.family-tabs button{font-size:1rem;padding:12px 8px}.tree-section{padding:35px 16px}.tree-viewport{height:65dvh;min-height:420px;max-height:620px}.tree-controls{gap:6px}.tree-controls button{font-size:.95rem;padding:10px 12px}.reading-tools{left:12px;bottom:12px}.reading-tools button{font-size:.95rem}.masthead nav{flex-wrap:wrap;font-size:.95rem;justify-content:flex-start;gap:14px}.subtitle{font-size:1.2rem}#chapter-nav a{font-size:.95rem}.tree-section>p{font-size:1.05rem}}
+@media print{.reading-tools,.family-tabs,.tree-controls,.tree-viewport,.tree-legend,.tree-details{display:none!important}#sherel[hidden],#berman[hidden]{display:block!important}.tree-list{display:block}.tree-list>ul{display:block!important}.tree-section{break-before:page}}
