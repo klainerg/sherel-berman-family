@@ -2,7 +2,7 @@
 'use strict';
 const el=(tag,text,className)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(className)node.className=className;return node;};
 const safeName=name=>/^[a-zA-Z0-9][a-zA-Z0-9_.-]*$/.test(name)&&!name.includes('..');
-const fetchFile=async(path,json=false)=>{const r=await fetch(path+'?v=20261121-photos',{cache:'no-store'});if(!r.ok)throw new Error(path);return json?r.json():r.text();};
+const fetchFile=async(path,json=false)=>{const r=await fetch(path+'?v=20261121-bilingual',{cache:'no-store'});if(!r.ok)throw new Error(path);return json?r.json():r.text();};
 let sourceMap=new Map();
 let references=new Map();
 let zoom=1;
@@ -16,12 +16,12 @@ viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close();});
 document.querySelector('#print').onclick=()=>window.print();
 function inline(node,text){
   const re=/\[\[מקור:\s*([\w-]+)\s*\]\]/g;let start=0;let match;
-  while((match=re.exec(text))){node.append(document.createTextNode(text.slice(start,match.index)));const entry=sourceMap.get(match[1]);if(entry){const sup=el('sup');const link=el('a',`[${entry.number}]`);link.href=`#source-${entry.id}`;link.setAttribute('aria-label',`מקור ${entry.number}: ${entry.title}`);const refs=references.get(entry.id)||[];link.id=`ref-${entry.id}-${refs.length+1}`;refs.push(link.id);references.set(entry.id,refs);sup.append(link);node.append(sup);}else{node.append(document.createTextNode('[הפניה למקור חסר]'));}start=re.lastIndex;}
+  while((match=re.exec(text))){node.append(document.createTextNode(text.slice(start,match.index)));const entry=sourceMap.get(match[1]);if(entry){const sup=el('sup');const link=el('a',`[${entry.number}]`);link.href=`#source-${entry.id}`;link.setAttribute('aria-label',`${window.i18n.t('מקור')} ${entry.number}: ${entry.title}`);const refs=references.get(entry.id)||[];link.id=`ref-${entry.id}-${refs.length+1}`;refs.push(link.id);references.set(entry.id,refs);sup.append(link);node.append(sup);}else{node.append(document.createTextNode(window.i18n.t('[הפניה למקור חסר]')));}start=re.lastIndex;}
   node.append(document.createTextNode(text.slice(start)));
 }
 function figure(filename,caption){
   const fig=el('figure');fig.hidden=true;let imageDone;fig.ready=new Promise(resolve=>imageDone=resolve);
-  if(safeName(filename)){const image=new Image();image.alt=caption;image.loading='eager';image.decoding='async';image.onload=()=>{const button=el('button');button.type='button';button.setAttribute('aria-label',`הגדלת תמונה: ${caption}`);button.append(image);button.onclick=()=>showImage(image.src,caption);fig.append(button,el('figcaption',caption));fig.hidden=false;imageDone();};image.onerror=()=>imageDone();image.src=`assets/images/${encodeURIComponent(filename)}`;}else{imageDone();}
+  if(safeName(filename)){const image=new Image();image.alt=caption;image.loading='eager';image.decoding='async';image.onload=()=>{const button=el('button');button.type='button';button.setAttribute('aria-label',`${window.i18n.t('הגדלת תמונה: ')}${caption}`);button.append(image);button.onclick=()=>showImage(image.src,caption);fig.append(button,el('figcaption',caption));fig.hidden=false;imageDone();};image.onerror=()=>imageDone();image.src=`assets/images/${encodeURIComponent(filename)}`;}else{imageDone();}
   return fig;
 }
 function renderChapter(chapter,text){
@@ -37,16 +37,16 @@ function renderChapter(chapter,text){
 async function init(){
   const story=document.querySelector('#story');
   try{
-    const [chapters,sources]=await Promise.all([fetchFile('content/chapters.json',true),fetchFile('content/sources.json',true)]);
+    const [chapters,sources]=await Promise.all([fetchFile(window.i18n.lang==='ru'?'content/chapters-ru.json':'content/chapters.json',true),fetchFile(window.i18n.lang==='ru'?'content/sources-ru.json':'content/sources.json',true)]);
     sources.forEach((s,i)=>sourceMap.set(s.id,{...s,number:i+1}));
     const results=await Promise.all(chapters.map(async c=>{if(!safeName(c.file)||! /^[a-z][a-z0-9-]*$/.test(c.id))throw new Error('chapter');return renderChapter(c,await fetchFile(`content/${c.file}`));}));
     story.replaceChildren(...results);
-    const related=el('div',undefined,'related-story');related.append(el('span','המשך הסיפור המשפחתי: '));const familyLink=el('a','שורשי משפחת קליינר');familyLink.href='https://klainerg.github.io/kleiner-family/';familyLink.target='_blank';familyLink.rel='noopener noreferrer';related.append(familyLink);document.querySelector('#together').append(related);
+    const related=el('div',undefined,'related-story');related.append(el('span',window.i18n.t('המשך הסיפור המשפחתי: ')));const familyLink=el('a',window.i18n.t('שורשי משפחת קליינר'));familyLink.href='https://klainerg.github.io/kleiner-family/'+(window.i18n.lang==='ru'?'?lang=ru':'');familyLink.target='_blank';familyLink.rel='noopener noreferrer';related.append(familyLink);document.querySelector('#together').append(related);
     const nav=document.querySelector('#chapter-nav');chapters.forEach(c=>{const a=el('a',c.title);a.href=`#${c.id}`;nav.append(a);});
-    const list=document.querySelector('#source-list');sources.forEach(s=>{const li=el('li');li.id=`source-${s.id}`;li.append(el('strong',s.title),el('div',s.note));if(s.url){try{const url=new URL(s.url);if(['http:','https:'].includes(url.protocol)){const a=el('a','פתיחת המקור');a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';li.append(a);}}catch{}}else li.append(el('span','פרטי ההפניה טרם צורפו','source-status'));(references.get(s.id)||[]).forEach((id,i)=>{const a=el('a',` חזרה לסיפור${i?' '+(i+1):''} ↩`);a.href=`#${id}`;li.append(a);});list.append(li);});
+    const list=document.querySelector('#source-list');sources.forEach(s=>{const li=el('li');li.id=`source-${s.id}`;li.append(el('strong',s.title),el('div',s.note));if(s.url){try{const url=new URL(s.url);if(['http:','https:'].includes(url.protocol)){const a=el('a',window.i18n.t('פתיחת המקור'));a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';li.append(a);}}catch{}}else li.append(el('span',window.i18n.t('פרטי ההפניה טרם צורפו'),'source-status'));(references.get(s.id)||[]).forEach((id,i)=>{const a=el('a',` ${window.i18n.t('חזרה לסיפור')}${i?' '+(i+1):''} ↩`);a.href=`#${id}`;li.append(a);});list.append(li);});
     const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){nav.querySelectorAll('a').forEach(a=>{const active=a.hash===`#${entry.target.id}`;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}}},{rootMargin:'-10% 0px -65% 0px'});results.forEach(a=>observer.observe(a));
     await Promise.all([...story.querySelectorAll('figure')].map(fig=>fig.ready));
     document.dispatchEvent(new Event('story-ready'));
-  }catch(error){story.replaceChildren(el('p','לא ניתן לטעון את הסיפור כעת. יש לרענן את הדף. לתצוגה מקומית יש לפתוח דרך שרת תצוגה ולא בלחיצה כפולה על הקובץ.'));console.error('טעינת תוכן נכשלה',error);}
+  }catch(error){story.replaceChildren(el('p',window.i18n.t('לא ניתן לטעון את הסיפור כעת. יש לרענן את הדף. לתצוגה מקומית יש לפתוח דרך שרת תצוגה ולא בלחיצה כפולה על הקובץ.')));console.error(window.i18n.t('טעינת תוכן נכשלה'),error);}
 }
 init();
