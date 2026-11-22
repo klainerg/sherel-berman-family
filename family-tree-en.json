@@ -1,15 +1,9 @@
 {
   "people": [
     {
-      "id": "zakharia",
-      "name": "Zakharia Sherel",
-      "subtitle": "Naum’s father",
-      "notes": "Iosif’s grandfather. The family preserved his photograph."
-    },
-    {
       "id": "naum",
       "name": "Naum Sherel",
-      "subtitle": "Zakharia’s son",
+      "subtitle": "Iosif’s father",
       "notes": "Father of Iosif Naumovich Sherel."
     },
     {

@@ -1,19 +1,9 @@
 {
   "people": [
     {
-      "id": "zakharia",
-      "name": "זכריה שרל",
-      "family": "sherel",
-      "x": 280,
-      "y": -190,
-      "subtitle": "אביו של נאום",
-      "notes": "סבו של יוסף. תמונתו נשמרה במשפחה.",
-      "chapter": "sherel-1"
-    },
-    {
       "id": "naum",
       "name": "נאום שרל",
-      "subtitle": "בנו של זכריה",
+      "subtitle": "אביו של יוסף",
       "notes": "אביו של יוסף נאומוביץ׳ שרל.",
       "family": "sherel",
       "x": 280,
@@ -413,12 +403,6 @@
       "parent": "naum",
       "children": [
         "iosif"
-      ]
-    },
-    {
-      "parent": "zakharia",
-      "children": [
-        "naum"
       ]
     }
   ]
