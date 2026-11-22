@@ -34,7 +34,7 @@
       "id": "hozkel",
       "name": "Hozkel Giter",
       "subtitle": "Hozkel Giter",
-      "notes": "Husband of Klava and father of Sasha. According to family tradition, his surname was changed from Gitler to Giter."
+      "notes": "Husband of Klava and father of Sasha."
     },
     {
       "id": "grisha",
@@ -52,7 +52,7 @@
       "id": "sasha",
       "name": "Sasha Giter",
       "subtitle": "Sasha · Son of Klava and Hozkel",
-      "notes": "Son of Klava and Hozkel Giter. Later moved to the United States. A childhood photograph of him with his cousin Igor Sherel has been preserved."
+      "notes": "Son of Klava and Hozkel Giter. Lives in the United States. A childhood photograph of him with his cousin Igor Sherel has been preserved."
     },
     {
       "id": "avrum",
@@ -146,13 +146,13 @@
     },
     {
       "id": "igor",
-      "name": "Igor Sherel",
+      "name": "Izya (Igor) Sherel",
       "subtitle": "Elder son · Died in 1990",
       "notes": "Elder son of Grisha and Dasha and brother of Nelia. Lived in Kamianets-Podilskyi with his mother Dasha. Died in 1990."
     },
     {
       "id": "nelia",
-      "name": "Nelia Kleiner, née Sherel",
+      "name": "Nesya (Nelia) Kleiner, née Sherel",
       "subtitle": "1957 · Daughter of Grisha and Dasha",
       "notes": "Igor’s younger sister and Fima Kleiner’s wife. Lived in Chernivtsi. Immigrated to Israel in 1991 with Dasha, Fima and their son Gena."
     },
