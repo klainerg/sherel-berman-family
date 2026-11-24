@@ -13,10 +13,16 @@
       "notes": "Husband of Olya and father of Grisha, Fima and Klava. According to family memories, he was chairman of a collective farm. Received the Medal for the Defence of Stalingrad and was recommended for the Medal for Combat Merit in July 1945."
     },
     {
+      "id": "zakharia",
+      "name": "Zakharia",
+      "subtitle": "Olya’s father",
+      "notes": "Father of Olya, Iosif’s wife, and Grisha’s maternal grandfather."
+    },
+    {
       "id": "olya",
       "name": "Olya Sherel",
       "subtitle": "Olya",
-      "notes": "Wife of Iosif and mother of Grisha, Fima and Klava."
+      "notes": "Wife of Iosif and mother of Grisha, Fima and Klava. Olya was Zakharia’s daughter."
     },
     {
       "id": "pima-sherel",

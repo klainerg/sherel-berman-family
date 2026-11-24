@@ -21,13 +21,23 @@
       "chapter": "sherel-1"
     },
     {
+      "id": "zakharia",
+      "name": "זכריה",
+      "subtitle": "אביה של אוליה",
+      "notes": "אביה של אוליה, אשתו של יוסף, וסבו מצד אמו של גרישה.",
+      "family": "sherel",
+      "x": 500,
+      "y": 0,
+      "chapter": "zakharia-portrait"
+    },
+    {
       "id": "olya",
       "name": "אוליה שרל",
       "family": "sherel",
       "x": 500,
       "y": 190,
       "subtitle": "Оля",
-      "notes": "אשתו של יוסף ואמם של גרישה, פימה וקלבה.",
+      "notes": "אשתו של יוסף ואמם של גרישה, פימה וקלבה. אוליה הייתה בתו של זכריה.",
       "chapter": "sherel-1"
     },
     {
@@ -403,6 +413,12 @@
       "parent": "naum",
       "children": [
         "iosif"
+      ]
+    },
+    {
+      "parent": "zakharia",
+      "children": [
+        "olya"
       ]
     }
   ]
